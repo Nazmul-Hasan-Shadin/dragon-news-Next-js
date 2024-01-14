@@ -10,6 +10,7 @@ import logo from '@/assets/logo.png'
 import { IconButton, Stack } from '@mui/material';
 import { Facebook } from '@mui/icons-material';
 import Link from 'next/link';
+import Header from './Header';
 const navItems = [{
     route:"Home",
     pathname:'/'
@@ -42,7 +43,9 @@ function Navbar() {
 
 
   return (
-    <AppBar position="static" className='bg-black'>
+ <>
+  <Header></Header>
+     <AppBar position="static" className='bg-black'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
    <Image src={logo} width={100} height={100} alt='logo' />
@@ -75,6 +78,7 @@ function Navbar() {
         </Toolbar>
       </Container>
     </AppBar>
+ </>
   );
 }
 export default Navbar;
